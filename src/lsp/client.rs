@@ -107,7 +107,11 @@ impl LspClient {
                     }
                 }
             },
-            "initializationOptions": null
+            "initializationOptions": {
+                "check": {
+                    "command": "clippy"
+                }
+            }
         });
 
         let result: InitializeResult = self.request("initialize", params).await?;
