@@ -106,7 +106,7 @@ pub fn is_key_value(token: &str) -> bool {
 
 /// Parses a key:value token into its key and value parts.
 /// If the value is wrapped in double quotes, they are stripped.
-#[allow(dead_code)]
+#[allow(dead_code)] // ported from fcp-core, will be wired up
 pub fn parse_key_value(token: &str) -> (String, String) {
     let idx = token.find(':').unwrap();
     let key = token[..idx].to_string();

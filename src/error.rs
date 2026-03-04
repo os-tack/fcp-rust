@@ -1,11 +1,11 @@
 use thiserror::Error;
 
-#[allow(dead_code)]
 #[derive(Debug, Error)]
 pub enum FcpRustError {
     #[error("transport error: {0}")]
     Transport(String),
 
+    #[allow(dead_code)] // used at runtime via LSP
     #[error("LSP protocol error: {0}")]
     LspProtocol(String),
 
@@ -15,9 +15,11 @@ pub enum FcpRustError {
     #[error("parse error: {0}")]
     Parse(String),
 
+    #[allow(dead_code)] // used at runtime via LSP
     #[error("session error: {0}")]
     Session(String),
 
+    #[allow(dead_code)] // used at runtime via LSP
     #[error("resolver error: {0}")]
     Resolver(String),
 

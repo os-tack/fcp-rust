@@ -1,13 +1,11 @@
 // FCP core event log — ported from Go (fcp-terraform)
-
-#![allow(dead_code)]
+#![allow(dead_code)] // ported from fcp-core, will be wired up
 
 use std::collections::HashMap;
 
 /// Marker for checkpoint entries in the event log.
 #[derive(Debug, Clone)]
 struct CheckpointEntry {
-    #[allow(dead_code)]
     name: String,
 }
 

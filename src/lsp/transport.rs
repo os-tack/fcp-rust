@@ -79,7 +79,7 @@ impl<W: AsyncWrite + Unpin> LspWriter<W> {
         }
     }
 
-    #[allow(dead_code)]
+    #[allow(dead_code)] // constructed via serde Deserialize
     pub fn from_shared(writer: Arc<Mutex<W>>) -> Self {
         Self { writer }
     }

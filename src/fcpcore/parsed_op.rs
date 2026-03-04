@@ -11,9 +11,9 @@ pub struct ParsedOp {
     pub positionals: Vec<String>,
     pub params: HashMap<String, String>,
     pub selectors: Vec<String>,
-    #[allow(dead_code)]
+    #[allow(dead_code)] // ported from fcp-core, will be wired up
     pub quoted_params: HashMap<String, bool>,
-    #[allow(dead_code)]
+    #[allow(dead_code)] // ported from fcp-core, will be wired up
     pub raw: String,
 }
 
@@ -21,7 +21,7 @@ pub struct ParsedOp {
 #[derive(Debug, Clone)]
 pub struct ParseError {
     pub error: String,
-    #[allow(dead_code)]
+    #[allow(dead_code)] // ported from fcp-core, will be wired up
     pub raw: String,
 }
 

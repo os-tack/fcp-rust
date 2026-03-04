@@ -1,6 +1,5 @@
 // FCP core session — ported from Go (fcp-terraform)
-
-#![allow(dead_code)]
+#![allow(dead_code)] // ported from fcp-core, will be wired up
 
 use std::collections::HashMap;
 
@@ -247,7 +246,6 @@ mod tests {
     #[derive(Debug)]
     struct MockModel {
         title: String,
-        #[allow(dead_code)]
         data: Vec<String>,
     }
 

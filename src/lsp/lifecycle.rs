@@ -6,18 +6,20 @@ use std::time::Instant;
 use crate::error::Result;
 use super::client::LspClient;
 
-#[allow(dead_code)]
 #[derive(Debug, Clone, PartialEq)]
 pub enum ServerStatus {
     NotStarted,
+    #[allow(dead_code)] // used at runtime via LSP
     Starting,
     Ready,
+    #[allow(dead_code)] // used at runtime via LSP
     Indexing,
+    #[allow(dead_code)] // used at runtime via LSP
     Crashed,
     Stopped,
 }
 
-#[allow(dead_code)]
+#[allow(dead_code)] // used at runtime via LSP
 pub struct LifecycleManager {
     command: String,
     args: Vec<String>,
@@ -30,7 +32,7 @@ pub struct LifecycleManager {
     tracked_documents: HashMap<String, String>,
 }
 
-#[allow(dead_code)]
+#[allow(dead_code)] // used at runtime via LSP
 impl LifecycleManager {
     pub fn new(command: String, args: Vec<String>, root_uri: String) -> Self {
         Self {

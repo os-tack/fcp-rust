@@ -168,7 +168,7 @@ impl LspClient {
     }
 
     /// Send textDocument/didChange notification (full sync).
-    #[allow(dead_code)]
+    #[allow(dead_code)] // used at runtime via LSP
     pub async fn did_change(&self, uri: &str, version: i32, text: &str) -> Result<()> {
         let params = serde_json::json!({
             "textDocument": {
@@ -181,7 +181,7 @@ impl LspClient {
     }
 
     /// Send textDocument/didClose notification.
-    #[allow(dead_code)]
+    #[allow(dead_code)] // used at runtime via LSP
     pub async fn did_close(&self, uri: &str) -> Result<()> {
         let params = serde_json::json!({
             "textDocument": {
@@ -200,7 +200,7 @@ impl LspClient {
     }
 
     /// Get the server capabilities from the initialize response.
-    #[allow(dead_code)]
+    #[allow(dead_code)] // used at runtime via LSP
     pub fn capabilities(&self) -> Option<&ServerCapabilities> {
         self.server_capabilities.as_ref()
     }

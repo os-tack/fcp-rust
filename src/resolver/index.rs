@@ -51,7 +51,7 @@ impl SymbolIndex {
             .unwrap_or_default()
     }
 
-    #[allow(dead_code)]
+    #[allow(dead_code)] // used at runtime via LSP
     pub fn lookup_by_file(&self, uri: &str) -> Vec<&SymbolEntry> {
         self.by_file
             .get(uri)
@@ -59,7 +59,7 @@ impl SymbolIndex {
             .unwrap_or_default()
     }
 
-    #[allow(dead_code)]
+    #[allow(dead_code)] // used at runtime via LSP
     pub fn lookup_by_container(&self, container: &str) -> Vec<&SymbolEntry> {
         self.by_container
             .get(container)
@@ -67,7 +67,7 @@ impl SymbolIndex {
             .unwrap_or_default()
     }
 
-    #[allow(dead_code)]
+    #[allow(dead_code)] // used at runtime via LSP
     pub fn invalidate_file(&mut self, uri: &str) {
         // Remove from by_file
         self.by_file.remove(uri);

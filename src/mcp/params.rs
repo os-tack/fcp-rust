@@ -1,5 +1,4 @@
 // MCP tool parameter types
-#![allow(dead_code)]
 
 use schemars::JsonSchema;
 use serde::Deserialize;
@@ -22,5 +21,6 @@ pub struct MutationParams {
     pub ops: Vec<String>,
 }
 
+#[allow(dead_code)] // constructed via serde Deserialize
 #[derive(Debug, Deserialize, JsonSchema)]
 pub struct HelpParams {}

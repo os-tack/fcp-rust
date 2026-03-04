@@ -1,5 +1,4 @@
 // LSP 3.17 type definitions — hand-rolled subset
-#![allow(dead_code)]
 
 use serde::{Deserialize, Serialize};
 
@@ -24,12 +23,14 @@ pub struct Location {
     pub range: Range,
 }
 
+#[allow(dead_code)] // constructed via serde Deserialize
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
 pub struct TextDocumentIdentifier {
     pub uri: String,
 }
 
+#[allow(dead_code)] // constructed via serde Deserialize
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
 pub struct TextDocumentPositionParams {
@@ -37,6 +38,7 @@ pub struct TextDocumentPositionParams {
     pub position: Position,
 }
 
+#[allow(dead_code)] // constructed via serde Deserialize
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
 pub struct VersionedTextDocumentIdentifier {
@@ -44,6 +46,7 @@ pub struct VersionedTextDocumentIdentifier {
     pub version: i32,
 }
 
+#[allow(dead_code)] // constructed via serde Deserialize
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
 pub struct TextDocumentItem {
@@ -53,6 +56,7 @@ pub struct TextDocumentItem {
     pub text: String,
 }
 
+#[allow(dead_code)] // constructed via serde Deserialize
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
 pub struct InitializeParams {
@@ -62,12 +66,14 @@ pub struct InitializeParams {
     pub initialization_options: Option<serde_json::Value>,
 }
 
+#[allow(dead_code)] // constructed via serde Deserialize
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Default)]
 #[serde(rename_all = "camelCase")]
 pub struct ClientCapabilities {
     pub general: Option<GeneralCapabilities>,
 }
 
+#[allow(dead_code)] // constructed via serde Deserialize
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Default)]
 #[serde(rename_all = "camelCase")]
 pub struct GeneralCapabilities {
@@ -358,18 +364,21 @@ pub struct CallHierarchyOutgoingCall {
     pub from_ranges: Vec<Range>,
 }
 
+#[allow(dead_code)] // constructed via serde Deserialize
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
 pub struct WorkspaceSymbolParams {
     pub query: String,
 }
 
+#[allow(dead_code)] // constructed via serde Deserialize
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
 pub struct DidOpenTextDocumentParams {
     pub text_document: TextDocumentItem,
 }
 
+#[allow(dead_code)] // constructed via serde Deserialize
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
 pub struct DidCloseTextDocumentParams {
@@ -435,6 +444,7 @@ pub struct CodeAction {
     pub is_preferred: Option<bool>,
 }
 
+#[allow(dead_code)] // constructed via serde Deserialize
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub struct JsonRpcRequest {
     pub jsonrpc: String,

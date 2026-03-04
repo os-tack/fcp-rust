@@ -12,7 +12,7 @@
 ///   - removed
 ///     ! meta/group operation
 ///     @ bulk/layout operation
-#[allow(dead_code)]
+#[allow(dead_code)] // ported from fcp-core, will be wired up
 pub fn format_result(success: bool, message: &str, prefix: Option<&str>) -> String {
     if !success {
         return format!("ERROR: {}", message);
