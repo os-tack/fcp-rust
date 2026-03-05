@@ -25,8 +25,8 @@ use super::params::*;
 
 #[derive(Clone)]
 pub struct RustServer {
-    model: Arc<Mutex<RustModel>>,
-    registry: Arc<VerbRegistry>,
+    pub(crate) model: Arc<Mutex<RustModel>>,
+    pub(crate) registry: Arc<VerbRegistry>,
     tool_router: ToolRouter<Self>,
     notification_task: Arc<Mutex<Option<tokio::task::JoinHandle<()>>>>,
 }
@@ -129,7 +129,7 @@ impl RustServer {
 }
 
 impl RustServer {
-    async fn handle_session(&self, action: &str) -> String {
+    pub(crate) async fn handle_session(&self, action: &str) -> String {
         let tokens: Vec<&str> = action.split_whitespace().collect();
         if tokens.is_empty() {
             return "! empty session action.".to_string();

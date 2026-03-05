@@ -87,16 +87,10 @@ rust_query('map')
 
 ## Installation
 
-### Install script
-
-```bash
-curl -fsSL https://aetherwing-io.github.io/fcp-rust/install.sh | sh
-```
-
 ### Build from source
 
 ```bash
-cargo install --path .
+cargo install --git https://github.com/aetherwing-io/fcp-rust
 ```
 
 ### MCP Client Configuration
