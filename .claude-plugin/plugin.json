@@ -1,0 +1,11 @@
+{
+  "name": "fcp-rust",
+  "description": "Query and refactor Rust codebases through intent-level commands",
+  "version": "0.1.2",
+  "license": "MIT",
+  "author": {
+    "name": "Scott Meyer"
+  },
+  "repository": "https://github.com/aetherwing-io/fcp-rust",
+  "keywords": ["rust", "rust-analyzer", "refactoring", "mcp"]
+}
