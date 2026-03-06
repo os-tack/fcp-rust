@@ -528,10 +528,17 @@ fn walk_rs_files(path: &std::path::Path, cb: &mut dyn FnMut(&std::fs::DirEntry))
 impl ServerHandler for RustServer {
     fn get_info(&self) -> ServerInfo {
         ServerInfo {
+            server_info: Implementation {
+                name: "fcp-rust".to_string(),
+                version: "0.1.0".to_string(),
+                ..Default::default()
+            },
             instructions: Some(
-                "FCP Rust server for querying Rust codebases via rust-analyzer. \
-                 Use rust_session to open a workspace, rust_query for read-only queries, \
-                 and rust_help for the reference card."
+                "FCP Rust server for querying and navigating Rust codebases via rust-analyzer. \
+                 Use rust_session to open a workspace directory containing a Cargo.toml, \
+                 rust_query for read-only queries like finding definitions, references, \
+                 diagnostics, and symbols, rust for refactoring operations, and rust_help \
+                 for the full verb reference. Start every interaction with rust_session."
                     .into(),
             ),
             capabilities: ServerCapabilities::builder().enable_tools().build(),
