@@ -6,6 +6,6 @@
   "author": {
     "name": "Scott Meyer"
   },
-  "repository": "https://github.com/aetherwing-io/fcp-rust",
+  "repository": "https://github.com/os-tack/fcp-rust",
   "keywords": ["rust", "rust-analyzer", "refactoring", "mcp"]
 }

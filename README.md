@@ -4,7 +4,7 @@ MCP server for Rust codebases via rust-analyzer.
 
 ## What It Does
 
-fcp-rust lets LLMs navigate, inspect, and refactor Rust code through intent-level commands. Instead of reading raw source files, the LLM sends operations like `find Config @kind:struct` or `rename old_name new_name @file:main.rs` and fcp-rust routes them through rust-analyzer's LSP for accurate, project-aware results. Built on the [FCP](https://github.com/aetherwing-io/fcp) framework.
+fcp-rust lets LLMs navigate, inspect, and refactor Rust code through intent-level commands. Instead of reading raw source files, the LLM sends operations like `find Config @kind:struct` or `rename old_name new_name @file:main.rs` and fcp-rust routes them through rust-analyzer's LSP for accurate, project-aware results. Built on the [FCP](https://github.com/os-tack/fcp) framework.
 
 Written in Rust using [rmcp](https://github.com/anthropics/rmcp) for MCP transport and rust-analyzer as the language intelligence backend.
 
@@ -90,7 +90,7 @@ rust_query('map')
 ### Build from source
 
 ```bash
-cargo install --git https://github.com/aetherwing-io/fcp-rust
+cargo install --git https://github.com/os-tack/fcp-rust
 ```
 
 ### MCP Client Configuration
